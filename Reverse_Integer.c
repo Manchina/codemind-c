@@ -1,13 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int n,sum=0,temp;
-    scanf("%d",&n);
-    while(n!=0)
-    {
-        temp=n%10;
-        sum=sum*10+temp;
-        n=n/10;
-    }
-    printf("%d",sum);
+int Num, rev_Num = 0, remainder;
+
+    
+
+    scanf("%d", &Num);    
+
+    while (Num != 0){
+
+        remainder = Num % 10;
+
+        rev_Num = rev_Num * 10 + remainder;
+
+        Num = Num/10;
+
+    }    
+
+    printf("%d", rev_Num);
+
+    return 0;
 }
