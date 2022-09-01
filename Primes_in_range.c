@@ -1,38 +1,22 @@
 #include<stdio.h>
 #include<math.h>
-int factorcount(int i)
+int main ()
 {
-	int j,fc=2,sq;
-	sq=sqrt(i);
-	if(i==1)
-	{
-		return 1;
-	}
-	for(j=2;j<=sq;j++)
-	{
-		if(i%j==0)
-		{
-			fc+=2;
-		}
-	}
-	if(sq*sq==i)
-	{
-		fc-=1;
-	}
-	return fc;
-}
-int main()
-{
-	int i,n1,n2,fc,p=0;
-	scanf("%d",&n1);
-	scanf("%d",&n2);
-	for(i=n1;i<=n2;i++)
-	{
-	    fc=factorcount(i);
-	    if(fc==2)
-	    {
-	    	p++;
-	    }
-	}
-	printf("%d",p);
+    int m,n,i,j,count=0,c=0;
+    scanf("%d%d",&m,&n);
+    if(m==1)
+    m=2;
+    for(j=m;j<=n;j++)
+    {
+        count=0;
+        for(i=2;i<=sqrt(j);i++)
+        {
+            if(j%i==0)
+            count++;
+        }
+        if(count==0)
+        c++;
+    }
+    printf("%d",c);
+    return 0;
 }
