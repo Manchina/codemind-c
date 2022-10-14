@@ -1,17 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int n,temp,larg=0;
+    int n,max=0,rem;
     scanf("%d",&n);
-    while(n>0)
-    {
-        temp=n%10;
-        if(larg<temp)
-        {
-            larg=temp;
+    while(n!=0){
+        rem=n%10;
+        if(rem>max){
+            max=rem;
         }
-        n=n/10;
+        n = n/10;
     }
-    printf("%d",larg);
-    return 0;
+    
+    printf("%d",max);
 }
